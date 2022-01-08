@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:p_green/ui/pages/home_page.dart';
 import 'package:p_green/ui/pages/profile_page.dart';
+import 'package:p_green/ui/pages/qr_page.dart';
 import 'package:p_green/utils/page_routers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -26,8 +27,9 @@ class MyApp extends StatelessWidget {
       routes: {
         PageRoutes.homePage: (context) => const HomePage(),
         PageRoutes.profilePage: (context) => const ProfilePage(),
+        PageRoutes.qRViewExample: (context)=>const QRViewExample(),
       },
-      home: const ProfilePage(),
+      home: const HomePage(),
     );
   }
 }

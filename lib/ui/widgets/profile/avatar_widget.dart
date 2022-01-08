@@ -14,14 +14,21 @@ class AvatarWidget extends StatelessWidget {
         child: Stack(
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage(houseIcon),
+              backgroundImage: NetworkImage(
+                  "https://zpsocial-f47-org.zadn.vn/28486473f0541f0a4645.jpg"),
               radius: size.width / 6,
             ),
             Align(
               alignment: Alignment.topRight,
               child: CircleAvatar(
-                backgroundImage: AssetImage(houseIcon),
+                backgroundColor: Colors.white,
+                // backgroundImage: AssetImage(cmrIcon),
                 radius: size.width / 20,
+                child: Image.asset(
+                  cmrIcon,
+                  fit: BoxFit.cover,
+                  width: size.width / 20,
+                ),
               ),
             ),
           ],

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:p_green/utils/my_images.dart';
 
 class MyTree {
   final String? assetIcon;
   final String? name;
   final int? time;
+  final Color? color;
 
-  MyTree({this.assetIcon, this.name, this.time});
+  MyTree({this.assetIcon, this.name, this.time, this.color});
 }
 
 class OverviewWidget extends StatelessWidget {
@@ -14,8 +16,16 @@ class OverviewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<MyTree> list = [
-      MyTree(time: 4, name: "My Tree", assetIcon: ""),
-      MyTree(time: 2, name: "My Tree", assetIcon: "")
+      MyTree(
+          time: 4,
+          name: "My Tree",
+          assetIcon: huychuong1Icon,
+          color: Colors.amber.shade500.withOpacity(0.5)),
+      MyTree(
+          time: 2,
+          name: "My Tree",
+          assetIcon: huychuong2Icon,
+          color: Colors.lightBlue.shade500.withOpacity(0.5))
     ];
     Size size = MediaQuery.of(context).size;
     return Padding(
@@ -50,7 +60,7 @@ Widget _itemBuilder({BuildContext? context, MyTree? data}) {
     child: Container(
       width: size.width / 2.5,
       decoration: BoxDecoration(
-          color: Colors.red,
+          color: data!.color,
           borderRadius: BorderRadius.all(Radius.circular(size.width / 20))),
       child: Padding(
         padding: EdgeInsets.all(size.width / 50),
@@ -59,13 +69,14 @@ Widget _itemBuilder({BuildContext? context, MyTree? data}) {
           children: [
             CircleAvatar(
               backgroundColor: Colors.teal,
-              radius: size.width / 10,
+              backgroundImage: AssetImage(data.assetIcon!),
+              radius: size.width / 15,
             ),
             SizedBox(
               height: size.width / 30,
             ),
             Text(
-              "${data!.name}",
+              "${data.name}",
               style: TextStyle(
                   fontSize: size.width / 25,
                   color: Colors.black87,
@@ -78,13 +89,13 @@ Widget _itemBuilder({BuildContext? context, MyTree? data}) {
               text: TextSpan(
                 children: [
                   TextSpan(
-                      text: '${data.time} more left\n',
+                      text: 'còn ${data.time} lần\n',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: size.width / 25,
                           color: Colors.black)),
                   TextSpan(
-                      text: 'to upgrade!',
+                      text: 'để nâng cấp!',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: size.width / 25,
@@ -108,16 +119,20 @@ Widget _header({BuildContext? context}) {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Profile Overview",
+            "Tổng quan về tiểu sử",
             style: TextStyle(
                 fontSize: size.width / 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87),
           ),
-          Icon(
-            Icons.zoom_out_map,
-            color: Colors.grey.shade500,
-          )
+          Padding(
+              padding: EdgeInsets.only(right: size.width / 25),
+              child: SizedBox(
+                  width: size.width / 16,
+                  child: Image.asset(
+                    menuIcon,
+                    color: Colors.grey.shade600,
+                  )))
         ],
       ));
 }

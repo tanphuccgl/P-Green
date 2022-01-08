@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:p_green/utils/my_images.dart';
 
 class Category {
-  final Icon? icon;
+  final String? icon;
   final String? label;
 
   Category({this.icon, this.label});
@@ -17,10 +17,10 @@ class CategoriesWidget extends StatefulWidget {
 
 class _CategoriesWidgetState extends State<CategoriesWidget> {
   List<Category> list = [
-    Category(icon: Icon(Icons.star), label: "Hữu cơ"),
-    Category(icon: Icon(Icons.wrong_location), label: "Vô cơ"),
-    Category(icon: Icon(Icons.face), label: "Tái chế"),
-    Category(icon: Icon(Icons.ac_unit_sharp), label: "Nguy hiểm"),
+    Category(icon: huucoIcon, label: "Hữu cơ"),
+    Category(icon: vocoIcon, label: "Vô cơ"),
+    Category(icon: taicheIcon, label: "Tái chế"),
+    Category(icon: nguyhaiIcon, label: "Nguy hại"),
   ];
 
   @override
@@ -33,7 +33,7 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
         Align(
           alignment: Alignment.topLeft,
           child: Text(
-            "Plant Category",
+            "Loại thực vật",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: size.width / 20,
@@ -69,7 +69,7 @@ Widget _buildCategory({BuildContext? context, List<Category>? list}) {
                   color: Colors.grey.shade200,
                   image:  DecorationImage(
                       image: AssetImage(
-                          houseIcon),
+                          list![index].icon!),
                       fit: BoxFit.cover),
                   borderRadius:
                       BorderRadius.all(Radius.circular(size.width / 20)),
@@ -80,7 +80,7 @@ Widget _buildCategory({BuildContext? context, List<Category>? list}) {
               ),
               Expanded(
                 child: Text(
-                  "${list![index].label}",
+                  "${list[index].label}",
                   style: TextStyle(
                       color: Colors.teal,
                       fontSize: size.width / 25,

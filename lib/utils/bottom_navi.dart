@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:p_green/ui/pages/home_page.dart';
 import 'package:p_green/ui/pages/profile_page.dart';
+import 'package:p_green/ui/pages/qr_page.dart';
 
 class BottomNar extends StatefulWidget {
   final int? index;
@@ -24,11 +25,11 @@ class _BottomNarState extends State<BottomNar> {
         break;
 
       case 1:
-        // Navigator.push(
-        //   context,
-        //
-        //   MaterialPageRoute(builder: (context) => NotificationManagerPage()),
-        // );
+        Navigator.push(
+          context,
+
+          MaterialPageRoute(builder: (context) => const QRViewExample()),
+        );
         break;
       case 2:
         Navigator.push(
@@ -59,8 +60,8 @@ class _BottomNarState extends State<BottomNar> {
         // BottomNavigationBarItem(
         //     icon: Icon(Icons.list_alt, size: size.width * 0.05 ,), title: Text('Thời khóa biểu', style: TextStyle(fontSize: size.width * 0.035),)),
         BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_none, size: size.width * 0.05),
-            title: Text('Thông báo',
+            icon: Icon(Icons.qr_code_scanner, size: size.width * 0.05),
+            title: Text('QR Code',
                 style: TextStyle(fontSize: size.width * 0.035))),
         BottomNavigationBarItem(
             icon: Icon(Icons.person_outline_sharp, size: size.width * 0.05),

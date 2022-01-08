@@ -18,7 +18,7 @@ class ProfilePage extends StatelessWidget {
       ),
       appBar: AppBar(
         title: const Text(
-          "My Profile",
+          "Tài khoản",
           style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.transparent,
@@ -52,7 +52,7 @@ class ProfilePage extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                      text: 'Tree\n',
+                      text: 'Cây\n',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: size.width / 15,
@@ -70,37 +70,37 @@ class ProfilePage extends StatelessWidget {
               height: size.width / 15,
             ),
             const OverviewWidget(),
-            SizedBox(
-              height: size.width / 15,
-            ),
-            Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: size.width / 20),
-                child: RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                          text: 'See Analytics',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: size.width / 20,
-                              color: Colors.red)),
-                      WidgetSpan(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: size.width / 30),
-                          child: Icon(
-                            Icons.arrow_forward_sharp,
-                            size: size.width / 20,
-                            color: Colors.red,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            // SizedBox(
+            //   height: size.width / 15,
+            // ),
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: Padding(
+            //     padding: EdgeInsets.symmetric(horizontal: size.width / 20),
+            //     child: RichText(
+            //       text: TextSpan(
+            //         children: [
+            //           TextSpan(
+            //               text: 'See Analytics',
+            //               style: TextStyle(
+            //                   fontWeight: FontWeight.bold,
+            //                   fontSize: size.width / 20,
+            //                   color: Colors.red)),
+            //           WidgetSpan(
+            //             child: Padding(
+            //               padding: EdgeInsets.only(left: size.width / 30),
+            //               child: Icon(
+            //                 Icons.arrow_forward_sharp,
+            //                 size: size.width / 20,
+            //                 color: Colors.red,
+            //               ),
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

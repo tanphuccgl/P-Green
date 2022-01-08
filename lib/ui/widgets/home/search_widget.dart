@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p_green/utils/my_images.dart';
 
 class SearchWidget extends StatelessWidget {
   const SearchWidget({Key? key}) : super(key: key);
@@ -19,16 +20,16 @@ class SearchWidget extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: size.width / 30),
           child: Row(
             children: [
-              Icon(
-                Icons.search_outlined,
-                color: Colors.black87,
-                size: size.width / 8,
+              Image.asset(
+                searchIcon,
+                color: Colors.grey.shade700,
+                width: size.width / 10,
               ),
               SizedBox(
                 width: size.width / 20,
               ),
               Text(
-                "Search a plant.",
+                "Tìm kiếm",
                 style: TextStyle(
                     color: Colors.grey.shade400,
                     fontWeight: FontWeight.bold,

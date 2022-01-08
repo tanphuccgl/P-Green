@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(bottomNavigationBar: BottomNar(index: 0,),
+    return Scaffold(bottomNavigationBar: const BottomNar(index: 0,),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
@@ -27,8 +27,9 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               SizedBox(
-                height: size.width / 15,
+                height: size.width / 10,
               ),
+
               const HeaderWidget(),
               SizedBox(
                 height: size.width / 20,

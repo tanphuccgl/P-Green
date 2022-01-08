@@ -16,8 +16,8 @@ class HistoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<History> list = [
-      History(label: "Argula", time: 5, assetImage: ""),
-      History(label: "Spinach", time: 21, assetImage: ""),
+      History(label: "Chuối", time: 5, assetImage: chuoiIcon),
+      History(label: "Rau xà lách", time: 21, assetImage: xalachIcon),
       History(label: "Argula", time: 5, assetImage: ""),
       History(label: "Spinach", time: 3, assetImage: ""),
       History(label: "Argula", time: 7, assetImage: ""),
@@ -29,7 +29,7 @@ class HistoryWidget extends StatelessWidget {
         Align(
           alignment: Alignment.topLeft,
           child: Text(
-            "Plant Category",
+            "Lịch sử quét",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: size.width / 20,
@@ -37,10 +37,10 @@ class HistoryWidget extends StatelessWidget {
             ),
           ),
         ),
+        _buildHistory(context: context, list: list),
         SizedBox(
           height: size.width / 20,
         ),
-        _buildHistory(context: context, list: list)
       ]),
     );
   }
@@ -50,8 +50,10 @@ Widget _buildHistory({BuildContext? context, List<History>? list}) {
   Size size = MediaQuery.of(context!).size;
   return SizedBox(
     width: size.width,
-    height: size.width,
+    height: size.width / 2,
     child: ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.only(
@@ -70,17 +72,22 @@ Widget _buildHistory({BuildContext? context, List<History>? list}) {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: size.width / 3,
+                  width: size.width / 2.5,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.asset(
-                        houseIcon,
-                        width: size.width / 10,
-                        height: size.width / 10,
+                      SizedBox(
+                        width: size.width / 5,
+                        child: Image.asset(
+                          list![index].assetImage!,
+                          width: size.width / 10,
+                          height: size.width / 10,
+                        ),
                       ),
-                      Text("${list![index].label}")
+                      SizedBox(
+                          width: size.width / 5,
+                          child: Text("${list[index].label}"))
                     ],
                   ),
                 ),
@@ -95,11 +102,11 @@ Widget _buildHistory({BuildContext? context, List<History>? list}) {
                         color: Colors.black54,
                       ),
                       Text(
-                        "\t\t\t${list[index].time} days to harvest",
+                        "\t\t\t${list[index].time} ngày để thu hoạch",
                         style: TextStyle(
                             color: Colors.black54,
                             fontWeight: FontWeight.bold,
-                            fontSize: size.width / 30),
+                            fontSize: size.width / 32),
                       )
                     ],
                   ),
@@ -109,7 +116,7 @@ Widget _buildHistory({BuildContext? context, List<History>? list}) {
           ),
         );
       },
-      itemCount: 4,
+      itemCount: 2,
     ),
   );
 }
