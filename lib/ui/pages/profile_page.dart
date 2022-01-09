@@ -25,83 +25,85 @@ class ProfilePage extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
       ),
-      body: SizedBox(
-        height: size.height,
-        width: size.width,
-        child: Column(
-          children: [
-            SizedBox(
-              width: size.width,
-              height: size.height / 2.8,
-              child: Stack(
-                children: [
-                  Positioned(
-                    top: -220,
-                    child: backgroundWidget(context: context),
-                  ),
-                  Positioned(
-                    top: 100,
-                    left: size.width / 2.9,
-                    child: const AvatarWidget(),
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: SizedBox(
+          height: size.height,
+          width: size.width,
+          child: Column(
+            children: [
+              SizedBox(
+                width: size.width,
+                height: size.height / 2.8,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: -220,
+                      child: backgroundWidget(context: context),
+                    ),
+                    Positioned(
+                      top: 100,
+                      left: size.width / 2.9,
+                      child: const AvatarWidget(),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                      text: 'Cây\n',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: size.width / 15,
-                          color: Colors.red)),
-                  TextSpan(
-                      text: '10',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: size.width / 17,
-                          color: Colors.black)),
-                ],
+              RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                        text: 'Cây đã trồng\n',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: size.width / 15,
+                            color: Colors.red)),
+                    TextSpan(
+                        text: '10',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: size.width / 17,
+                            color: Colors.black)),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: size.width / 15,
-            ),
-            const OverviewWidget(),
-            // SizedBox(
-            //   height: size.width / 15,
-            // ),
-            // Align(
-            //   alignment: Alignment.topLeft,
-            //   child: Padding(
-            //     padding: EdgeInsets.symmetric(horizontal: size.width / 20),
-            //     child: RichText(
-            //       text: TextSpan(
-            //         children: [
-            //           TextSpan(
-            //               text: 'See Analytics',
-            //               style: TextStyle(
-            //                   fontWeight: FontWeight.bold,
-            //                   fontSize: size.width / 20,
-            //                   color: Colors.red)),
-            //           WidgetSpan(
-            //             child: Padding(
-            //               padding: EdgeInsets.only(left: size.width / 30),
-            //               child: Icon(
-            //                 Icons.arrow_forward_sharp,
-            //                 size: size.width / 20,
-            //                 color: Colors.red,
-            //               ),
-            //             ),
-            //           ),
-            //         ],
-            //       ),
-            //     ),
-            //   ),
-            // ),
-          ],
+              SizedBox(
+                height: size.width / 15,
+              ),
+              const OverviewWidget(),
+              SizedBox(
+                height: size.width / 15,
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: size.width / 20),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                            text: 'See Analytics',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: size.width / 20,
+                                color: Colors.red)),
+                        WidgetSpan(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: size.width / 30),
+                            child: Icon(
+                              Icons.arrow_forward_sharp,
+                              size: size.width / 20,
+                              color: Colors.red,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

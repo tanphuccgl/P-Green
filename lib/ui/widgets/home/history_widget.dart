@@ -16,8 +16,8 @@ class HistoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<History> list = [
-      History(label: "Chuối", time: 5, assetImage: chuoiIcon),
-      History(label: "Rau xà lách", time: 21, assetImage: xalachIcon),
+      History(label: "Chuối", time: 1, assetImage: chuoiIcon),
+      History(label: "Rau xà lách", time: 1, assetImage: xalachIcon),
       History(label: "Argula", time: 5, assetImage: ""),
       History(label: "Spinach", time: 3, assetImage: ""),
       History(label: "Argula", time: 7, assetImage: ""),
@@ -102,7 +102,7 @@ Widget _buildHistory({BuildContext? context, List<History>? list}) {
                         color: Colors.black54,
                       ),
                       Text(
-                        "\t\t\t${list[index].time} ngày để thu hoạch",
+                        "\t\t\t${list[index].time} ngày trước",
                         style: TextStyle(
                             color: Colors.black54,
                             fontWeight: FontWeight.bold,

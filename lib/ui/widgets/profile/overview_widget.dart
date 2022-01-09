@@ -114,25 +114,55 @@ Widget _header({BuildContext? context}) {
   Size size = MediaQuery.of(context!).size;
   return SizedBox(
       width: size.width,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Tổng quan về tiểu sử",
+            "- Địa điểm: Gia Lai",
             style: TextStyle(
                 fontSize: size.width / 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87),
           ),
-          Padding(
-              padding: EdgeInsets.only(right: size.width / 25),
-              child: SizedBox(
-                  width: size.width / 16,
-                  child: Image.asset(
-                    menuIcon,
-                    color: Colors.grey.shade600,
-                  )))
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              children: [
+                TextSpan(
+                    text: '- AQI: ',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width / 20,
+                        color: Colors.black87)),
+                TextSpan(
+                    text: '43',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width / 20,
+                        color: Colors.green)),
+              ],
+            ),
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Tổng quan về tiểu sử",
+                style: TextStyle(
+                    fontSize: size.width / 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87),
+              ),
+              Padding(
+                  padding: EdgeInsets.only(right: size.width / 25),
+                  child: SizedBox(
+                      width: size.width / 16,
+                      child: Image.asset(
+                        menuIcon,
+                        color: Colors.grey.shade600,
+                      )))
+            ],
+          ),
         ],
       ));
 }
