@@ -67,6 +67,43 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
+              Container(
+                width: size.width / 2,
+                height: size.width / 8,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.green),
+                  borderRadius:
+                      BorderRadius.all(Radius.circular(size.width / 10)),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    SizedBox(
+                      height: size.width / 8,
+                      child: Icon(
+                        Icons.phone,size: size.width/15,
+                        color: Colors.green,
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: size.width / 8,
+                      width: size.width / 2.8,
+                      child: Align(alignment: Alignment.center,
+                        child: Text(
+                          "Nhấn vào để gọi thu gom rác tái chế",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.green, fontWeight: FontWeight.bold,
+                          fontSize: size.width/28),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
               SizedBox(
                 height: size.width / 15,
               ),

@@ -33,7 +33,7 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
         Align(
           alignment: Alignment.topLeft,
           child: Text(
-            "Loại thực vật",
+            "Loại Rác",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: size.width / 20,
