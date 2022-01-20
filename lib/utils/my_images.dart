@@ -13,3 +13,4 @@ String huychuong1Icon= "assets/images/huychuong1.png";
     String menuIcon=  "assets/images/menu.png";
     String handIcon="assets/images/hand.png";
     String searchIcon="assets/images/search.png";
+    String avatar= "assets/images/avatar.jpg";

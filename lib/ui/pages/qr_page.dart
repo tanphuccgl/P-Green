@@ -106,7 +106,7 @@ class _QRViewExampleState extends State<QRViewExample> {
   }
   void showOk(QRViewController controller,String data) {
     var alert = new AlertDialog1(
-      title: "",
+      title: "Bạn vui lòng nhấn vào liên kết dưới",
       description: data,
       onPressed: () {
         setState(() {

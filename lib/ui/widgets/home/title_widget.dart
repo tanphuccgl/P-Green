@@ -17,18 +17,18 @@ Widget titleWidget({BuildContext? context}) {
                     fontWeight: FontWeight.normal,
                     fontSize: size.width / 13,
                     color: Colors.black54)),
-            TextSpan(
-                text: 'Nam',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: size.width / 11,
-                    color: Colors.black)),
-            WidgetSpan(
-              child: Padding(
-                padding: EdgeInsets.only(left: size.width / 30),
-                child: Image.asset(handIcon, width: size.width / 10),
-              ),
-            ),
+            // TextSpan(
+            //     text: 'Nam',
+            //     style: TextStyle(
+            //         fontWeight: FontWeight.bold,
+            //         fontSize: size.width / 11,
+            //         color: Colors.black)),
+            // WidgetSpan(
+            //   child: Padding(
+            //     padding: EdgeInsets.only(left: size.width / 30),
+            //     child: Image.asset(handIcon, width: size.width / 10),
+            //   ),
+            // ),
           ],
         ),
       ),

@@ -13,9 +13,9 @@ class AvatarWidget extends StatelessWidget {
       child: Align(
         child: Stack(
           children: [
-            CircleAvatar(
-              backgroundImage: NetworkImage(
-                  "https://zpsocial-f47-org.zadn.vn/28486473f0541f0a4645.jpg"),
+            CircleAvatar(backgroundColor: Colors.blue,
+               backgroundImage: AssetImage(
+                   avatar),
               radius: size.width / 6,
             ),
             Align(

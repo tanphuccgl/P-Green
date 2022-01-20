@@ -67,52 +67,52 @@ Widget _buildHistory({BuildContext? context, List<History>? list}) {
               color: Colors.grey.shade200,
               borderRadius: BorderRadius.all(Radius.circular(size.width / 20)),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: size.width / 2.5,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        width: size.width / 5,
-                        child: Image.asset(
-                          list![index].assetImage!,
-                          width: size.width / 10,
-                          height: size.width / 10,
-                        ),
-                      ),
-                      SizedBox(
-                          width: size.width / 5,
-                          child: Text("${list[index].label}"))
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: size.width / 2.5,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.timelapse,
-                        size: size.width / 20,
-                        color: Colors.black54,
-                      ),
-                      Text(
-                        "\t\t\t${list[index].time} ngày trước",
-                        style: TextStyle(
-                            color: Colors.black54,
-                            fontWeight: FontWeight.bold,
-                            fontSize: size.width / 32),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
+            // child: Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   crossAxisAlignment: CrossAxisAlignment.center,
+            //   children: [
+            //     SizedBox(
+            //       width: size.width / 2.5,
+            //       child: Row(
+            //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //         crossAxisAlignment: CrossAxisAlignment.center,
+            //         children: [
+            //           SizedBox(
+            //             width: size.width / 5,
+            //             child: Image.asset(
+            //               list![index].assetImage!,
+            //               width: size.width / 10,
+            //               height: size.width / 10,
+            //             ),
+            //           ),
+            //           SizedBox(
+            //               width: size.width / 5,
+            //               child: Text("${list[index].label}"))
+            //         ],
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: size.width / 2.5,
+            //       child: Row(
+            //         crossAxisAlignment: CrossAxisAlignment.center,
+            //         children: [
+            //           Icon(
+            //             Icons.timelapse,
+            //             size: size.width / 20,
+            //             color: Colors.black54,
+            //           ),
+            //           Text(
+            //             "\t\t\t${list[index].time} ngày trước",
+            //             style: TextStyle(
+            //                 color: Colors.black54,
+            //                 fontWeight: FontWeight.bold,
+            //                 fontSize: size.width / 32),
+            //           )
+            //         ],
+            //       ),
+            //     )
+            //   ],
+            // ),
           ),
         );
       },

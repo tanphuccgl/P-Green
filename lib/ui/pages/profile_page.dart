@@ -59,7 +59,7 @@ class ProfilePage extends StatelessWidget {
                             fontSize: size.width / 15,
                             color: Colors.red)),
                     TextSpan(
-                        text: '10',
+                        text: '0',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: size.width / 17,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AlertDialog1 extends StatelessWidget {
   static const String routeName = '/AlertDialog1';
@@ -27,20 +28,34 @@ class AlertDialog1 extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      title!,
+                      title!, textAlign: TextAlign.center,
                       style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     SizedBox(
                       height: size.height / 128,
                     ),
-                    Center(
-                      child: Text(
-                        description!,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ),
+                    description?.contains("http") == true
+                        ? Center(
+                            child: GestureDetector(
+                              onTap: () {
+                                launch(description!);
+                              },
+                              child: Text(
+                                description!,
+                                textAlign: TextAlign.center,
+                                style:
+                                    TextStyle(decoration: TextDecoration.underline,fontSize: 20, color: Colors.blue),
+                              ),
+                            ),
+                          )
+                        : Center(
+                            child: Text(
+                              description!,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
                     SizedBox(
                       height: size.height / 32,
                     ),

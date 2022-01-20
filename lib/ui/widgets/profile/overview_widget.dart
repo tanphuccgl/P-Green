@@ -117,7 +117,7 @@ Widget _header({BuildContext? context}) {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "- Địa điểm: Gia Lai",
+            "- Địa điểm: Hồ Chí Minh",
             style: TextStyle(
                 fontSize: size.width / 20,
                 fontWeight: FontWeight.bold,
@@ -134,11 +134,11 @@ Widget _header({BuildContext? context}) {
                         fontSize: size.width / 20,
                         color: Colors.black87)),
                 TextSpan(
-                    text: '43',
+                    text: '65',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: size.width / 20,
-                        color: Colors.green)),
+                        color: Colors.yellow)),
               ],
             ),
           ),
